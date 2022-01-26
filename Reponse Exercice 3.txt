@@ -1,0 +1,22 @@
+Private Sub btn_Calculer_Click()
+    Dim angleA, angleB, sideA, sideB As Double
+    
+    angleA = Val(txt_angleA.Text)
+    angleB = Val(txt_angleB.Text)
+    sideA = Val(txt_sideA.Text)
+    
+    '- Degree to Radian
+    angleA = ((angleA * 3.14159) / 180)
+    angleB = ((angleB * 3.14159) / 180)
+    
+    '- Calcul
+    sideB = ((sideA * Sin(angleB)) / Sin(angleA))
+    
+    '- Resultat
+    txt_sideB.Text = sideB
+
+End Sub
+
+Private Sub btn_exit_Click()
+    End
+End Sub
