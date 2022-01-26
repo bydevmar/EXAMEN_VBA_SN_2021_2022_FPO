@@ -1,0 +1,91 @@
+
+'- Mthode 1
+Private Sub btn_confirm_Click()
+    If (ob_xl.Value = True) Then
+        If (ob_red.Value = True) Then
+            txt_size.Text = "XL"
+            txt_color.Text = "RED"
+        ElseIf (ob_blue.Value = True) Then
+            txt_size.Text = "XL"
+            txt_color.Text = "BLUE"
+        ElseIf (ob_beige.Value = True) Then
+            txt_size.Text = "XL"
+            txt_color.Text = "BEIGE"
+        End If
+        
+    ElseIf (ob_l.Value = True) Then
+        If (ob_red.Value = True) Then
+            txt_size.Text = "L"
+            txt_color.Text = "RED"
+        ElseIf (ob_blue.Value = True) Then
+            txt_size.Text = "L"
+            txt_color.Text = "BLUE"
+        ElseIf (ob_beige.Value = True) Then
+            txt_size.Text = "L"
+            txt_color.Text = "BEIGE"
+        End If
+        
+    ElseIf (ob_m.Value = True) Then
+        If (ob_red.Value = True) Then
+            txt_size.Text = "M"
+            txt_color.Text = "RED"
+        ElseIf (ob_blue.Value = True) Then
+            txt_size.Text = "M"
+            txt_color.Text = "BLUE"
+        ElseIf (ob_beige.Value = True) Then
+            txt_size.Text = "M"
+            txt_color.Text = "BEIGE"
+        End If
+        
+    ElseIf (ob_s.Value = True) Then
+        If (ob_red.Value = True) Then
+            txt_size.Text = "S"
+            txt_color.Text = "RED"
+        ElseIf (ob_blue.Value = True) Then
+            txt_size.Text = "S"
+            txt_color.Text = "BLUE"
+        ElseIf (ob_beige.Value = True) Then
+            txt_size.Text = "S"
+            txt_color.Text = "BEIGE"
+        End If
+        
+    End If
+
+End Sub
+
+
+
+
+
+
+
+
+
+'- Mthode 2 
+
+Public Sub verifColor(size As String)
+    If (ob_red.Value = True) Then
+        txt_size.Text = size
+        txt_color.Text = "RED"
+    ElseIf (ob_blue.Value = True) Then
+        txt_size.Text = size
+        txt_color.Text = "BLUE"
+    ElseIf (ob_beige.Value = True) Then
+        txt_size.Text = size
+        txt_color.Text = "BEIGE"
+    End If
+End Sub
+
+Private Sub btn_confirm_Click()
+    If (ob_xl.Value = True) Then
+        Call verifColor("XL")
+    ElseIf (ob_l.Value = True) Then
+        Call verifColor("L")
+    ElseIf (ob_m.Value = True) Then
+        Call verifColor("M")
+    ElseIf (ob_s.Value = True) Then
+        Call verifColor("S")
+    End If
+End Sub
+
+
